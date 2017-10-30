@@ -3,7 +3,7 @@
 Web services REST que expõem as informações relativas Secretaria Nacional de Assistência Social.
 
 
-# Guia de desenvolvimento php (API RESTful)
+## Guia de desenvolvimento php (API RESTful)
 
 ## Sumário
 
@@ -30,9 +30,9 @@ código uniforme em todo o projeto, independentemente do número de desenvolvedo
 ## Respostas
 
 Colocando a coleção no namespace *“data”*, poderemos facilmente acrescentar outro contexto
-relacionado à resposta, mas que não é parte da lista de recursos. Contagens, links e etc poderão
+relacionado à resposta, que não é parte da lista de recursos. Contagens, links e etc poderão
 fazer parte da resposta. Assim também é possível incorporar outras relações aninhadas em 
-seu próprio elemento “data” e até mesmo incluir metadados para essas relações incorporadas. 
+seu próprio elemento *“data”* e até mesmo incluir metadados para essas relações incorporadas. 
 
 ### Use namespace em itens sozinhos
 
