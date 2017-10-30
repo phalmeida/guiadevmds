@@ -25,6 +25,8 @@ código uniforme em todo o projeto, independentemente do número de desenvolvedo
 
 ## Requisições
 
+...
+
 **[⬆ voltar para o topo](#sumário)**
 
 ## Respostas
