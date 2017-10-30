@@ -38,13 +38,6 @@ seu próprio elemento *“data”* e até mesmo incluir metadados para essas rel
 
 ### Use namespace em itens sozinhos
 
-```php
-//Retorno os dados
-return response()->json([
-    'data' => Usuario::find($id)->toArray(),
-]);
-```
-
 ```json
 {
     "data": {
@@ -56,13 +49,6 @@ return response()->json([
 **[⬆ voltar para o topo](#sumário)**
 
 ### Use namespace para vários itens
-
-```php
-//Retorno os dados
-return response()->json([
-    'data' => Usuario::all()->toArray(),
-]);
-```
 
 ```json
 {
