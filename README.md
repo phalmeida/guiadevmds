@@ -17,8 +17,10 @@ Web services REST que expõem as informações relativas Secretaria Nacional de 
      * [Branches de suporte](#branches-de-suporte)
         1. [Branches de melhorias](#branches-de-melhorias)
         2. [Criando um  branch de melhoria](#criando-um-branch-de-melhoria)
-        3. [Finalzando um branch de melhoria](#finalzando-um-branch-de-melhoria)
+        3. [Finalizando um branch de melhoria](#finalizando-um-branch-de-melhoria)
         4. [Branches de lançamento](#branches-de-lançamento)
+        5. [Criando um branch de lançamento](#criando-um-branch-de-lançamento)
+        5. [Finalizando um branch de lançamento](#finalizando-um-branch-de-lançamento)
   5. [Variáveis](#variáveis)
      * [Use variáveis pronunciaveis e com significado claro](#use-variáveis-pronunciaveis-e-com-significado-claro)
      * [Use o mesmo vocabulário para o mesmo tipo de variável](#use-o-mesmo-vocabulário-para-o-mesmo-tipo-de-variável)
@@ -133,7 +135,7 @@ Ao iniciar o desenvolvimento de uma funcionalidade, crie um branch a partir do b
 $ git checkout -b feature/xpto develop
 ```
 
-#### Finalzando um branch de melhoria
+#### Finalizando um branch de melhoria
 
 Uma vez concluído o desenvolvimento no branch, ele deve ser incorporado de volta no branch develop através de um pull request.
 
@@ -143,7 +145,7 @@ Envie seu branch para o servidor:
 $ git push origin feature/xpto
 ```
 
-Navegue até a interface do projeto no GitLab e clique em New merge request, selecione como base seu branch e o branch develop.
+Navegue até a interface do projeto no GitLab e clique em **New merge request**, selecione como base seu branch e o branch develop.
 
 Uma vez aceito o merge request pelo administrador do projeto, a melhoria entrará na próxima versão.
 
@@ -159,10 +161,6 @@ Deve ser mesclado de volta para:
 Convensão de nome:
 - release/MAJOR.MINOR.PATCH
 
-```sh
-$ git push origin feature/xpto
-```
-
 Branches de lançamento são usados para preparação do lançamento da próxima versão de produção. Nele são permitidas 
 pequenas correções e atualização de versão nos arquivos. Fazendo isso no branch de lançamento, 
 o branch develop fica livre para receber novas melhorias para a próxima versão.
@@ -171,8 +169,31 @@ Na criação do branch de lançamento é decidido qual versão o projeto terá, 
 alterações da próxima versão, independende de qual for. Esta decisão é feita na criação do branch de lançamento e segue 
 as convensões de versionamento do projeto.
 
+#### Criando um branch de lançamento
 
+Branches de lançamentto são criados a partir do branch **develop**. Digamos que o projeto está na versão 1.5.3 e há uma 
+implantação em breve. O estado do branch **develop** está pronto para a próxima implantação e decidimos que vai se 
+tornar 1.2.0 (ao invés de 1.1.5 ou 2.0.0). Então criamos um branch com o nome da versão que escolhemos.
 
+```sh
+$ git checkout -b release/1.2.0 develop
+```
+
+Depois de criar o branch, a primeira coisa a fazer é aumentar a versão no arquivo composer.json e comitar.
+
+```sh
+$ git commit -a -m "Atualização da aplicação para a versão 1.2.0"
+```
+
+Este branch deve existir por enquanto, até que esteja pronto para ser implantado definitivamente em produção. Pequenas 
+correções são permitidas nele (ao invés do branch develop). Adicionar funcionalidades novas nele são proibidas, apenas 
+correções pontuais desta versão de lançamento.
+
+#### Finalizando um branch de lançamento
+
+Quando o branch de lançamento estiver pronto para ser implantado em produção, algumas ações precisam ser tomadas. 
+Primeiro o brach de lançamento é mesclado com o branch **master** (uma vez que cada commit no master é uma nova versão, 
+por definição):
 
 **[⬆ voltar para o topo](#sumário)**
 
