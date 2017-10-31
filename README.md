@@ -216,8 +216,6 @@ versões futuras também possuam as correções feitas neste branch:
 $ git checkout develop
 ```
 
-
-
 Neste momento podem ocorrer alguns conflitos, já que as correções podem mudar a versão dos arquivos, se acontecer, corrija e comite.
 
 Feitos os merges podemos excluir o branch de lançamento, já que não precisamos mais dele:
@@ -225,6 +223,10 @@ Feitos os merges podemos excluir o branch de lançamento, já que não precisamo
 ```sh
 $ git branch -d release/1.2.0
 ```
+
+#### Branches de correções
+
+...
 
 **[⬆ voltar para o topo](#sumário)**
 
