@@ -106,20 +106,21 @@ Os diferentes tipos de branches que  usaremos são:
 
 Cada tipo de branch tem um propósito específico e segue regras de quais branches devem ser originados e mesclados.
 
-**Ruim:**
+#### Branches de melhorias
 
-```php
-getUserInfo();
-getUserData();
-getUserRecord();
-getUserProfile();
-```
+Deve ser criado a partir de:
+- develop
 
-**Bom:**
+Deve ser mesclado de volta para:
+- develop
 
-```php
-getUser();
-```
+Convensão de nome:
+- Qualquer nome exceto master, develop, release/*, ou hotfix/*
+
+Branches de melhorias são usados para desenvolver novas funcionalidades para o próximo lançamento. Em excência, um branch 
+de melhoria existe apenas enquanto está em desenvolvimento, devendo ser mesclado ao branch develop, assumindo que entrará 
+no próximo lançamento, ou descartado caso não seja útil ou seja um experimento.
+
 
 **[⬆ voltar para o topo](#sumário)**
 
