@@ -15,6 +15,8 @@ Web services REST que expõem as informações relativas Secretaria Nacional de 
   4. [Fluxo de versionamento](#fluxo-de-versionamento)
      * [Branches principais](#branches-principais)
      * [Branches de suporte](#branches-de-suporte)
+        1. [Branches de melhorias](#branches-de-melhorias)
+        2. [Criando um  branch de melhoria](#criando-um-branch-de-melhoria)
   5. [Variáveis](#variáveis)
      * [Use variáveis pronunciaveis e com significado claro](#use-variáveis-pronunciaveis-e-com-significado-claro)
      * [Use o mesmo vocabulário para o mesmo tipo de variável](#use-o-mesmo-vocabulário-para-o-mesmo-tipo-de-variável)
@@ -121,6 +123,13 @@ Branches de melhorias são usados para desenvolver novas funcionalidades para o 
 de melhoria existe apenas enquanto está em desenvolvimento, devendo ser mesclado ao branch develop, assumindo que entrará 
 no próximo lançamento, ou descartado caso não seja útil ou seja um experimento.
 
+#### Criando um  branch de melhoria
+
+Ao iniciar o desenvolvimento de uma funcionalidade, crie um branch a partir do branch develop
+
+```sh
+git checkout -b feature/xpto develop
+```
 
 **[⬆ voltar para o topo](#sumário)**
 
