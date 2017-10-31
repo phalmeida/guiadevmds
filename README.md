@@ -12,7 +12,10 @@ Web services REST que expõem as informações relativas Secretaria Nacional de 
   3. [Respostas](#respostas)
      * [Use namespace em itens sozinhos](#use-namespace-em-itens-sozinhos)
      * [Use namespace para vários itens](#use-namespace-para-vários-itens)
-  4. [Variáveis](#variáveis)
+  4. [Fluxo de versionamento](#fluxo-de-versionamento)
+     * [Branches principais](#branches-principais)
+     * [Use namespace para vários itens](#use-namespace-para-vários-itens)
+  5. [Variáveis](#variáveis)
      * [Use variáveis pronunciaveis e com significado claro](#use-variáveis-pronunciaveis-e-com-significado-claro)
      * [Use o mesmo vocabulário para o mesmo tipo de variável](#use-o-mesmo-vocabulário-para-o-mesmo-tipo-de-variável)
 
@@ -66,6 +69,48 @@ seu próprio elemento *“data”* e até mesmo incluir metadados para essas rel
 ```
 
 **[⬆ voltar para o topo](#sumário)**
+
+## Fluxo de versionamento
+
+Trabalhando em equipe ou sozinho, usar um padrão facilita primeiramente porque você não precisa pensar muito, uma vez 
+que o padrão já foi escolhido e documentado. Segundo, usar um padrão reconhecido e principalmente documentado facilita 
+pra cada pessoa que entrar, visualizar ou decidir contribuir para o seu projeto vai reconhecer aquele padrão e assim vai 
+diminuir a curva de aprendizado e ainda aumentar a produtividade.
+
+### Branches principais
+
+**Ruim:**
+
+```php
+$dmastr = $data->format('y-m-d');
+```
+
+**Bom:**
+
+```php
+$dataAtual = $data->format('y-m-d');
+```
+**[⬆ voltar para o topo](#sumário)**
+
+### Use o mesmo vocabulário para o mesmo tipo de variável
+
+**Ruim:**
+
+```php
+getUserInfo();
+getUserData();
+getUserRecord();
+getUserProfile();
+```
+
+**Bom:**
+
+```php
+getUser();
+```
+
+**[⬆ voltar para o topo](#sumário)**
+
 
 ## Variáveis
 
