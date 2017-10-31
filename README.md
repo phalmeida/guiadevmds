@@ -17,7 +17,8 @@ Web services REST que expõem as informações relativas Secretaria Nacional de 
      * [Branches de suporte](#branches-de-suporte)
         1. [Branches de melhorias](#branches-de-melhorias)
         2. [Criando um  branch de melhoria](#criando-um-branch-de-melhoria)
-        2. [Finalzando um branch de melhoria](#finalzando-um-branch-de-melhoria)
+        3. [Finalzando um branch de melhoria](#finalzando-um-branch-de-melhoria)
+        4. [Branches de lançamento](#branches-de-lançamento)
   5. [Variáveis](#variáveis)
      * [Use variáveis pronunciaveis e com significado claro](#use-variáveis-pronunciaveis-e-com-significado-claro)
      * [Use o mesmo vocabulário para o mesmo tipo de variável](#use-o-mesmo-vocabulário-para-o-mesmo-tipo-de-variável)
@@ -141,6 +142,37 @@ Envie seu branch para o servidor:
 ```sh
 $ git push origin feature/xpto
 ```
+
+Navegue até a interface do projeto no GitLab e clique em New merge request, selecione como base seu branch e o branch develop.
+
+Uma vez aceito o merge request pelo administrador do projeto, a melhoria entrará na próxima versão.
+
+
+#### Branches de lançamento
+
+Deve ser criado a apartir de:
+- develop
+
+Deve ser mesclado de volta para:
+- develop e master
+
+Convensão de nome:
+- release/MAJOR.MINOR.PATCH
+
+```sh
+$ git push origin feature/xpto
+```
+
+Branches de lançamento são usados para preparação do lançamento da próxima versão de produção. Nele são permitidas 
+pequenas correções e atualização de versão nos arquivos. Fazendo isso no branch de lançamento, 
+o branch develop fica livre para receber novas melhorias para a próxima versão.
+
+Na criação do branch de lançamento é decidido qual versão o projeto terá, até este momento o branch develop reflete as 
+alterações da próxima versão, independende de qual for. Esta decisão é feita na criação do branch de lançamento e segue 
+as convensões de versionamento do projeto.
+
+
+
 
 **[⬆ voltar para o topo](#sumário)**
 
