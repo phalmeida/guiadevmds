@@ -14,7 +14,7 @@ Web services REST que expõem as informações relativas Secretaria Nacional de 
      * [Use namespace para vários itens](#use-namespace-para-vários-itens)
   4. [Fluxo de versionamento](#fluxo-de-versionamento)
      * [Branches principais](#branches-principais)
-     * [Use namespace para vários itens](#use-namespace-para-vários-itens)
+     * [Branches de suporte](#branches-de-suporte)
   5. [Variáveis](#variáveis)
      * [Use variáveis pronunciaveis e com significado claro](#use-variáveis-pronunciaveis-e-com-significado-claro)
      * [Use o mesmo vocabulário para o mesmo tipo de variável](#use-o-mesmo-vocabulário-para-o-mesmo-tipo-de-variável)
@@ -89,18 +89,22 @@ O branch **master** é o branch principal, a HEAD do projeto, nele há somente v
 O branch **develop** possui todo código já entregue e as últimas de desenvolvimento para a próxima versão. Quando o código 
 do branch **develop** é considerado estável e pronto para ser implantado, todas as alterações devem ser mescladas de volta para 
 o branch **master** e criada uma *tag*. Como isso é feito com mais detalhes a seguir.
-```php
-$dmastr = $data->format('y-m-d');
-```
 
-**Bom:**
-
-```php
-$dataAtual = $data->format('y-m-d');
-```
 **[⬆ voltar para o topo](#sumário)**
 
-### Use o mesmo vocabulário para o mesmo tipo de variável
+### Branches de suporte
+
+Junto aos branches  master e develop utilizamos outros branches de suporte, para correção de erros, criação  de melhorias 
+e preparação para implantação. Diferente dos branches principais, esses tem uma vida limitada, uma vez que eles 
+são removidos eventualmente.
+
+Os diferentes tipos de branches que  usaremos são:
+
+- Branches de melhorias (feature)
+- Branches de lançamento (release)
+- Branches de correções (hotfix)
+
+Cada tipo de branch tem um propósito específico e segue regras de quais branches devem ser originados e mesclados.
 
 **Ruim:**
 
