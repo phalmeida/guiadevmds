@@ -195,6 +195,37 @@ Quando o branch de lançamento estiver pronto para ser implantado em produção,
 Primeiro o brach de lançamento é mesclado com o branch **master** (uma vez que cada commit no master é uma nova versão, 
 por definição):
 
+```sh
+$ git checkout master
+```
+
+```sh
+$ git merge --no-ff release/1.2.0
+```
+
+Em seguida este commit deve ser *tageado* para referência futura para esta versão:
+
+```sh
+$ git tag -a 1.2.0
+```
+
+Finalmente, as mudanças feitas no branch de lançamento precisam mescladas devolta no branch **develop**, para que as 
+versões futuras também possuam as correções feitas neste branch:
+
+```sh
+$ git checkout develop
+```
+
+
+
+Neste momento podem ocorrer alguns conflitos, já que as correções podem mudar a versão dos arquivos, se acontecer, corrija e comite.
+
+Feitos os merges podemos excluir o branch de lançamento, já que não precisamos mais dele:
+
+```sh
+$ git branch -d release/1.2.0
+```
+
 **[⬆ voltar para o topo](#sumário)**
 
 
