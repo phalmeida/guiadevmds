@@ -17,6 +17,7 @@ Web services REST que expõem as informações relativas Secretaria Nacional de 
      * [Branches de suporte](#branches-de-suporte)
         1. [Branches de melhorias](#branches-de-melhorias)
         2. [Criando um  branch de melhoria](#criando-um-branch-de-melhoria)
+        2. [Finalzando um branch de melhoria](#finalzando-um-branch-de-melhoria)
   5. [Variáveis](#variáveis)
      * [Use variáveis pronunciaveis e com significado claro](#use-variáveis-pronunciaveis-e-com-significado-claro)
      * [Use o mesmo vocabulário para o mesmo tipo de variável](#use-o-mesmo-vocabulário-para-o-mesmo-tipo-de-variável)
@@ -128,7 +129,17 @@ no próximo lançamento, ou descartado caso não seja útil ou seja um experimen
 Ao iniciar o desenvolvimento de uma funcionalidade, crie um branch a partir do branch develop
 
 ```sh
-git checkout -b feature/xpto develop
+$ git checkout -b feature/xpto develop
+```
+
+#### Finalzando um branch de melhoria
+
+Uma vez concluído o desenvolvimento no branch, ele deve ser incorporado de volta no branch develop através de um pull request.
+
+Envie seu branch para o servidor:
+
+```sh
+$ git push origin feature/xpto
 ```
 
 **[⬆ voltar para o topo](#sumário)**
