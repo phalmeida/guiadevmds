@@ -79,8 +79,16 @@ diminuir a curva de aprendizado e ainda aumentar a produtividade.
 
 ### Branches principais
 
-**Ruim:**
+O repositório central possui dois branches principais com vida infinita.
 
+- master
+- develop
+
+O branch **master** é o branch principal, a HEAD do projeto, nele há somente versões que estão em produção.
+
+O branch **develop** possui todo código já entregue e as últimas de desenvolvimento para a próxima versão. Quando o código 
+do branch **develop** é considerado estável e pronto para ser implantado, todas as alterações devem ser mescladas de volta para 
+o branch **master** e criada uma *tag*. Como isso é feito com mais detalhes a seguir.
 ```php
 $dmastr = $data->format('y-m-d');
 ```
