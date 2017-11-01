@@ -1,8 +1,3 @@
-# Sistemas de Informação da Rede Suas
-
-Web services REST que expõem as informações relativas Secretaria Nacional de Assistência Social.
-
-
 ## Guia de desenvolvimento php (API RESTful)
 
 ## Sumário
