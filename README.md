@@ -225,9 +225,11 @@ $ git branch -d release/1.2.0
 Deve ser criado a apartir de:
 
 - master
+
 Deve ser mesclado de volta para:
 
 - develop e master
+
 Convensão de nome:
 
 - hotfix/*
