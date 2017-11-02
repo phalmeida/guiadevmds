@@ -15,7 +15,8 @@
         3. [Finalizando um branch de melhoria](#finalizando-um-branch-de-melhoria)
         4. [Branches de lançamento](#branches-de-lançamento)
         5. [Criando um branch de lançamento](#criando-um-branch-de-lançamento)
-        5. [Finalizando um branch de lançamento](#finalizando-um-branch-de-lançamento)
+        6. [Finalizando um branch de lançamento](#finalizando-um-branch-de-lançamento)
+        7. [Branches de correções](#branches-de-correções)        
   5. [Variáveis](#variáveis)
      * [Use variáveis pronunciaveis e com significado claro](#use-variáveis-pronunciaveis-e-com-significado-claro)
      * [Use o mesmo vocabulário para o mesmo tipo de variável](#use-o-mesmo-vocabulário-para-o-mesmo-tipo-de-variável)
@@ -221,6 +222,18 @@ $ git branch -d release/1.2.0
 
 #### Branches de correções
 
+Deve ser criado a apartir de:
+
+- master
+Deve ser mesclado de volta para:
+
+- develop e master
+Convensão de nome:
+
+- hotfix/*
+
+Branches de correções são muito parecidos com branches de lançamentos em sua concepção, pois tem o mesmo objetivo de prepara uma versão para produção, embora não planejada. Eles surgem da necessidade de agir imediatamente em uma versão de produção já implantada. Quando um *bug* crítico ocorre em produção um branch de correção precisa ser criado a partir da tag correspondente.
+A ideia é que o time que está trabalhando na próxima versão no branch **develop** possa continuar enquanto alguém prepara uma correção.
 ...
 
 **[⬆ voltar para o topo](#sumário)**
