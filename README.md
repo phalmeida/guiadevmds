@@ -236,7 +236,6 @@ Convensão de nome:
 
 Branches de correções são muito parecidos com branches de lançamentos em sua concepção, pois tem o mesmo objetivo de prepara uma versão para produção, embora não planejada. Eles surgem da necessidade de agir imediatamente em uma versão de produção já implantada. Quando um *bug* crítico ocorre em produção um branch de correção precisa ser criado a partir da tag correspondente.
 A ideia é que o time que está trabalhando na próxima versão no branch **develop** possa continuar enquanto alguém prepara uma correção.
-...
 
 **[⬆ voltar para o topo](#sumário)**
 
