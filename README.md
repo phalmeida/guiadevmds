@@ -273,6 +273,5 @@ getUserProfile();
 ```php
 getUser();
 ```
-
 **[⬆ voltar para o topo](#sumário)**
 
