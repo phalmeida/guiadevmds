@@ -2,7 +2,6 @@
 ## Guia de desenvolvimento php (API RESTful)
 
 ## Sumário
-
   1. [Introdução](#introdução)
   2. [Requisições](#requisições)
   3. [Respostas](#respostas)
